@@ -1,13 +1,58 @@
 #include <iostream>
+using namespace std;
+
+
 
 void Q1000()
 {
+	//문제
+	//두 정수 A와 B를 입력받은 다음, A + B를 출력하는 프로그램을 작성하시오.
+
+	//입력
+	//첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)
+
+	//출력
+	//첫째 줄에 A + B를 출력한다.
 	int A, B;
-	std::cin >> A >> B;
-	std::cout << A + B << std::endl;
+	cin >> A >> B;
+	cout << A + B << endl;
+}
+
+void Q1001()
+{
+	//문제
+	//두 정수 A와 B를 입력받은 다음, A - B를 출력하는 프로그램을 작성하시오.
+
+	//입력
+	//첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)
+
+	//출력
+	//첫째 줄에 A - B를 출력한다.
+
+	int A, B;
+	cin >> A >> B;
+	cout << A - B << endl;
+}
+
+void Q10998()
+{
+	//문제
+	//두 정수 A와 B를 입력받은 다음, A×B를 출력하는 프로그램을 작성하시오.
+
+	//입력
+	//첫째 줄에 A와 B가 주어진다. (0 < A, B < 10)
+
+	//출력
+	//첫째 줄에 A×B를 출력한다.
+
+	int A, B;
+	cin >> A >> B;
+	cout << A * B << endl;
 }
 
 int main()
 {
-	Q1000();
+	Q10998();
+	
+	return 0;
 }

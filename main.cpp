@@ -34,9 +34,21 @@ void Q1008()
 	cout << A / B << endl;
 }
 
+void Q10869()
+{
+	int a, b;
+	cin >> a >> b;
+
+	cout << a + b << endl;
+	cout << a - b << endl;
+	cout << a * b << endl;
+	cout << a / b << endl;
+	cout << a % b << endl;
+}
+
 int main()
 {
 	
-	
+
 	return 0;
 }

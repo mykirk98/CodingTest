@@ -24,9 +24,19 @@ void Q10998()
 	cout << A * B << endl;
 }
 
+void Q1008()
+{
+	double A, B;
+	cin >> A >> B;
+
+	cout.precision(12);
+	cout.fixed;
+	cout << A / B << endl;
+}
+
 int main()
 {
-	Q10998();
+	
 	
 	return 0;
 }

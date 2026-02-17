@@ -3,28 +3,28 @@ using namespace std;
 
 
 
-void Q1000()
+void Q1000()	// 2026/02/16 - 1번째 문제
 {
 	int A, B;
 	cin >> A >> B;
 	cout << A + B << endl;
 }
 
-void Q1001()
+void Q1001()	// 2026/02/16 - 2번째 문제
 {
 	int A, B;
 	cin >> A >> B;
 	cout << A - B << endl;
 }
 
-void Q10998()
+void Q10998()	// 2026/02/16 - 3번째 문제
 {
 	int A, B;
 	cin >> A >> B;
 	cout << A * B << endl;
 }
 
-void Q1008()
+void Q1008()	// 2026/02/16 - 4번째 문제
 {
 	double A, B;
 	cin >> A >> B;
@@ -34,7 +34,7 @@ void Q1008()
 	cout << A / B << endl;
 }
 
-void Q10869()
+void Q10869()	// 2026/02/16 - 5번째 문제
 {
 	int a, b;
 	cin >> a >> b;
@@ -46,7 +46,7 @@ void Q10869()
 	cout << a % b << endl;
 }
 
-void Q2739()
+void Q2739()	// 2026/02/17 - 1번째 문제
 {
 	int N;
 	cin >> N;
@@ -57,7 +57,7 @@ void Q2739()
 	}
 }
 
-void Q10430()
+void Q10430()	// 2026/02/17 - 2번째 문제
 {
 	int A, B, C;
 	cin >> A >> B >> C;
@@ -68,9 +68,38 @@ void Q10430()
 	cout << ((A % C) * (B % C)) % C << endl;
 }
 
+void Q2753()	// 2026/02/17 - 3번째 문제
+{
+	int year;
+	cin >> year;
+
+	if (year % 4 == 0)
+	{
+		if (year % 100 == 0)
+		{
+			if (year % 400 == 0)	// ex 400, 800, 1200, ...
+			{
+				cout << 1 << endl;
+			}
+			else	// ex 100, 200, 300, 500, 600, ...
+			{
+				cout << 0 << endl;
+			}
+		}
+		else	// ex 4, 8, 12, 16, ...
+		{
+			cout << 1 << endl;
+		}
+	}
+	else
+	{
+		cout << 0 << endl;
+	}
+}
+
 int main()
 {
-	Q10430();
+	Q2753();
 
 	return 0;
 }

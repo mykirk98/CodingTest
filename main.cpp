@@ -114,9 +114,23 @@ void Q2588()	// 2026/02/17 - 4번째 문제
 	cout << a * b << endl;
 }
 
+void Q10950()	// 2026/02/17 - 5번째 문제
+{
+	int T;
+	cin >> T;
+
+	for (int i = 0; i < T; i++)
+	{
+		int A, B;
+		cin >> A >> B;
+
+		cout << A + B << endl;
+	}
+}
+
 int main()
 {
-	Q2588();
+	Q10950();
 
 	return 0;
 }

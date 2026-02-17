@@ -46,9 +46,20 @@ void Q10869()
 	cout << a % b << endl;
 }
 
+void Q2739()
+{
+	int N;
+	cin >> N;
+
+	for (int i = 1; i < 10; i++)
+	{
+		cout << N << " * " << i << " = " << N * i << endl;
+	}
+}
+
 int main()
 {
-	
+	Q2739();
 
 	return 0;
 }

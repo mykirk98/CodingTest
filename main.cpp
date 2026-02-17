@@ -97,9 +97,26 @@ void Q2753()	// 2026/02/17 - 3번째 문제
 	}
 }
 
+void Q2588()	// 2026/02/17 - 4번째 문제
+{
+	int a, b;
+	cin >> a;
+	cin >> b;
+
+	int x, y, z;
+	x = b / 100;
+	y = (b % 100) / 10;
+	z = b % 10;
+
+	cout << a * z << endl;
+	cout << a * y << endl;
+	cout << a * x << endl;
+	cout << a * b << endl;
+}
+
 int main()
 {
-	Q2753();
+	Q2588();
 
 	return 0;
 }

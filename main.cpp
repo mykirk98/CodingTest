@@ -57,9 +57,20 @@ void Q2739()
 	}
 }
 
+void Q10430()
+{
+	int A, B, C;
+	cin >> A >> B >> C;
+
+	cout << (A + B) % C << endl;
+	cout << ((A % C) + (B % C)) % C << endl;
+	cout << (A * B) % C << endl;
+	cout << ((A % C) * (B % C)) % C << endl;
+}
+
 int main()
 {
-	Q2739();
+	Q10430();
 
 	return 0;
 }

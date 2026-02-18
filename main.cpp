@@ -147,12 +147,27 @@ void Q2884() // 2026/02/18 - 1번째 문제
 	cout << H << " " << M << endl;
 }
 
+void Q8393()
+{
+	int n;
+	cin >> n;
+
+	int sum = 0;
+
+	for (int i = 0; i <= n; i++)
+	{
+		sum += i;
+	}
+
+	cout << sum << endl;
+}
+
 #include <iostream>
 using namespace std;
 
 int main()
 {
-	Q2884();
+
 
 	return 0;
 }

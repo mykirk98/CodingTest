@@ -207,6 +207,19 @@ void Q10818()	// 2026/02/18 - 4번째 문제
 	cout << minVal << " " << maxVal << endl;
 }
 
+void Q11021()	// 2026/02/18 - 5번째 문제
+{
+	int T;
+	cin >> T;
+
+	for (int i = 0; i < T; i++)
+	{
+		int A, B;
+		cin >> A >> B;
+		cout << "Case #" << i + 1 << ": " << A + B << endl;
+	}
+}
+
 #include <iostream>
 using namespace std;
 

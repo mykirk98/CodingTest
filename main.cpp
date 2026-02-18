@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
-
 void Q1000()	// 2026/02/16 - 1번째 문제
 {
 	int A, B;
@@ -128,9 +126,33 @@ void Q10950()	// 2026/02/17 - 5번째 문제
 	}
 }
 
+void Q2884() // 2026/02/18 - 1번째 문제
+{
+	int H, M;
+	cin >> H >> M;
+
+	if (M < 45)
+	{
+		H--;
+		M += 60;
+	}
+
+	M -= 45;
+
+	if (H < 0)
+	{
+		H += 24;
+	}
+
+	cout << H << " " << M << endl;
+}
+
+#include <iostream>
+using namespace std;
+
 int main()
 {
-	Q10950();
+	Q2884();
 
 	return 0;
 }

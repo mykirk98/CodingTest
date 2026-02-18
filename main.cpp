@@ -229,6 +229,14 @@ void Q10951()	// 2026/02/18 - 6번째 문제
 	}
 }
 
+void Q18108()	// 2026/02/18 - 7번째 문제
+{
+	int y;
+	cin >> y;
+
+	cout << y - 543 << endl;
+}
+
 #include <iostream>
 using namespace std;
 

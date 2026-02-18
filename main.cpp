@@ -237,6 +237,19 @@ void Q18108()	// 2026/02/18 - 7번째 문제
 	cout << y - 543 << endl;
 }
 
+void Q11022()	// 2026/02/18 - 8번째 문제
+{
+	int A, B;
+	int T;
+	cin >> T;
+
+	for (int i = 0; i < T; i++)
+	{
+		cin >> A >> B;
+		cout << "Case #" << i + 1 << ": " << A << " + " << B << " = " << A + B << endl;
+	}
+}
+
 #include <iostream>
 using namespace std;
 

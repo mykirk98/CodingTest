@@ -147,7 +147,7 @@ void Q2884() // 2026/02/18 - 1번째 문제
 	cout << H << " " << M << endl;
 }
 
-void Q8393()
+void Q8393()	// 2026/02/18 - 2번째 문제
 {
 	int n;
 	cin >> n;
@@ -162,7 +162,7 @@ void Q8393()
 	cout << sum << endl;
 }
 
-void Q10952()
+void Q10952()	// 2026/02/18 - 3번째 문제
 {
 	int A, B;
 
@@ -178,6 +178,33 @@ void Q10952()
 			cout << A + B << endl;
 		}
 	}
+}
+
+void Q10818()	// 2026/02/18 - 4번째 문제
+{
+	int N;
+	cin >> N;
+
+	int minVal = 1000001;
+	int maxVal = -1000001;
+
+	for (int i = 0; i < N; i++)
+	{
+		int num;
+		cin >> num;
+
+		if (num < minVal)
+		{
+			minVal = num;
+		}
+
+		if (num > maxVal)
+		{
+			maxVal = num;
+		}
+	}
+
+	cout << minVal << " " << maxVal << endl;
 }
 
 #include <iostream>

@@ -285,6 +285,36 @@ void Q15552()	// 2026/02/18 - 10번째 문제
 	}
 }
 
+void Q1546()	// 2026/02/18 - 11번째 문제
+{
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+
+	int N;
+	cin >> N;
+
+	int maximum = 0;
+	float sum = 0;
+
+	int* array = new int[N]; // 동적 배열 할당
+
+	for (int i = 0; i < N; i++)
+	{
+		cin >> array[i];
+		sum += array[i];
+
+		if (array[i] > maximum)
+		{
+			maximum = array[i];
+		}
+	}
+
+	sum /= N; // 평균 계산
+	cout << sum / maximum * 100.0 << "\n";
+
+	delete[] array; // 동적 배열 해제
+}
+
 #include <iostream>
 using namespace std;
 

@@ -220,6 +220,15 @@ void Q11021()	// 2026/02/18 - 5번째 문제
 	}
 }
 
+void Q10951()	// 2026/02/18 - 6번째 문제
+{
+	int A, B;
+	while (!(cin >> A >> B).eof())	// ctrl + z 입력 시 EOF(End Of File) 발생
+	{
+		cout << A + B << endl;
+	}
+}
+
 #include <iostream>
 using namespace std;
 

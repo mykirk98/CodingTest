@@ -268,6 +268,23 @@ void Q11720()	// 2026/02/18 - 9번째 문제
 	cout << sum;
 }
 
+void Q15552()	// 2026/02/18 - 10번째 문제
+{
+	ios::sync_with_stdio(false);	// C++의 표준 입출력과 C의 표준 입출력을 동기화하지 않도록 설정하여 입출력 속도를 향상시킵니다.
+	cin.tie(NULL);
+
+	int T;
+	cin >> T;
+
+	int A, B;
+
+	for (int i = 0; i < T; i++)
+	{
+		cin >> A >> B;
+		cout << A + B << "\n";
+	}
+}
+
 #include <iostream>
 using namespace std;
 

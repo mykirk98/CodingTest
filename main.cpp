@@ -162,6 +162,24 @@ void Q8393()
 	cout << sum << endl;
 }
 
+void Q10952()
+{
+	int A, B;
+
+	while (true)
+	{
+		cin >> A >> B;
+		if (A == 0 && B == 0)
+		{
+			break;
+		}
+		else
+		{
+			cout << A + B << endl;
+		}
+	}
+}
+
 #include <iostream>
 using namespace std;
 

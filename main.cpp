@@ -315,11 +315,38 @@ void Q1546()	// 2026/02/18 - 11번째 문제
 	delete[] array; // 동적 배열 해제
 }
 
+void Q3052()	// 2026/02/18 - 12번째 문제
+{
+	int array[42] = { 0 }; // 0으로 초기화된 배열
+
+	for (int i = 0; i < 10; i++)
+	{
+		int N;
+		cin >> N;
+
+		array[N % 42] = 1;	// 나머지 값을 인덱스로 사용하여 해당 인덱스의 값을 1로 설정
+	}
+
+	int count = 0;
+	for (int i = 0; i < 42; i++)
+	{
+		if (array[i] == 1)
+		{
+			count++;	// 1로 설정된 인덱스의 개수를 세어줌
+		}
+	}
+
+	cout << count << "\n";
+}
+
 #include <iostream>
 using namespace std;
 
 int main()
 {
+	ios::sync_with_stdio(false);
+	cin.tie(NULL);
+
 
 
 	return 0;

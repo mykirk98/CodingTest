@@ -250,6 +250,24 @@ void Q11022()	// 2026/02/18 - 8번째 문제
 	}
 }
 
+void Q11720()	// 2026/02/18 - 9번째 문제
+{
+	int N;
+	cin >> N;
+
+	string numbers;
+	cin >> numbers;
+
+	int sum = 0;
+
+	for (int i = 0; i < N; i++)
+	{
+		sum += numbers[i] - '0';	// 문자 '0'의 아스키 코드 값은 48이므로, '0'을 빼면 해당 문자가 나타내는 숫자 값을 얻을 수 있다.
+	}
+
+	cout << sum;
+}
+
 #include <iostream>
 using namespace std;
 

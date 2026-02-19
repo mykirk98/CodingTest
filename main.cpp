@@ -379,6 +379,37 @@ void Q11382()	// 2026/02/19 - 3번째 문제
 	cout << A + B + C << "\n";
 }
 
+void Q2839()
+{
+	int N;
+	cin >> N;
+
+	int bag = 0;
+
+	while (N > 0)
+	{
+		if (N % 5 == 0)
+		{
+			bag += N / 5;
+			N = 0;
+		}
+		else
+		{
+			N -= 3;
+			bag++;
+		}
+	}
+
+	if (N < 0)
+	{
+		cout << -1 << "\n";
+	}
+	else
+	{
+		cout << bag << "\n";
+	}
+}
+
 #include <iostream>
 using namespace std;
 

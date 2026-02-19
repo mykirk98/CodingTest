@@ -369,6 +369,14 @@ void Q2480()	// 2026/02/19 - 2번째 문제
 		int maxNumber = max({ a, b, c });
 		cout << maxNumber * 100 << "\n";
 	}
+} 
+
+void Q11382()	// 2026/02/19 - 3번째 문제
+{
+	unsigned long long A, B, C;
+	cin >> A >> B >> C;
+
+	cout << A + B + C << "\n";
 }
 
 #include <iostream>
@@ -379,7 +387,7 @@ int main()
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-
+	
 
 	return 0;
 }

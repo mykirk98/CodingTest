@@ -448,6 +448,29 @@ void Q2577()	// 2026/02/19 - 5번째 문제
 //	cout << max(numA, numB) << "\n";
 //}
 
+void Q1110()	// 2026/02/19 - 7번째 문제
+{
+	int N;
+	cin >> N;
+
+	int a, b;
+	int cnt = 0;
+	int nextNum = N;
+	int thirdDigit;
+
+	do
+	{
+		a = nextNum / 10;
+		b = nextNum % 10;
+		thirdDigit = (a + b) % 10;
+		nextNum = b * 10 + thirdDigit;
+		cnt++;
+
+	} while (N != nextNum);
+
+	cout << cnt << "\n";
+}
+
 #include <iostream>
 
 using namespace std;
@@ -457,7 +480,7 @@ int main()
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-
+	
 
 	return 0;
 }

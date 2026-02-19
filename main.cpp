@@ -410,6 +410,27 @@ void Q2839()
 	}
 }
 
+void Q2577()	// 2026/02/19 - 4번째 문제
+{
+	int count[10] = { 0 };
+
+	int A, B, C;
+	cin >> A >> B >> C;
+
+	int N = A * B * C;
+
+	while (N > 0)
+	{
+		count[N % 10]++;
+		N /= 10;
+	}
+
+	for (int i = 0; i < 10; i++)
+	{
+		cout << count[i] << "\n";
+	}
+}
+
 #include <iostream>
 using namespace std;
 

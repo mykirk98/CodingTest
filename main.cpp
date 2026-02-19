@@ -379,7 +379,7 @@ void Q11382()	// 2026/02/19 - 3번째 문제
 	cout << A + B + C << "\n";
 }
 
-void Q2839()
+void Q2839()	// 2026/02/19 - 4번째 문제
 {
 	int N;
 	cin >> N;
@@ -410,7 +410,7 @@ void Q2839()
 	}
 }
 
-void Q2577()	// 2026/02/19 - 4번째 문제
+void Q2577()	// 2026/02/19 - 5번째 문제
 {
 	int count[10] = { 0 };
 
@@ -431,7 +431,25 @@ void Q2577()	// 2026/02/19 - 4번째 문제
 	}
 }
 
+//#include <string>
+//
+//void Q2908()	// 2026/02/19 - 6번째 문제
+//{
+//
+//	string A, B;
+//	cin >> A >> B;
+//
+//	reverse(A.begin(), A.end());
+//	reverse(B.begin(), B.end());
+//
+//	int numA = stoi(A);
+//	int numB = stoi(B);
+//
+//	cout << max(numA, numB) << "\n";
+//}
+
 #include <iostream>
+
 using namespace std;
 
 int main()
@@ -439,7 +457,7 @@ int main()
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	
+
 
 	return 0;
 }

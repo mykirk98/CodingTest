@@ -350,6 +350,27 @@ void Q2525()	// 2026/02/19 - 1번째 문제
 	cout << H << " " << M << "\n";
 }
 
+void Q2480()	// 2026/02/19 - 2번째 문제
+{
+	int a, b, c;
+	cin >> a >> b >> c;
+
+	if (a == b && b == c)
+	{
+		cout << 10000 + a * 1000 << "\n";
+	}
+	else if (a == b || a == c || b == c)
+	{
+		int sameNumber = (a == b) ? a : c;
+		cout << 1000 + sameNumber * 100 << "\n";
+	}
+	else
+	{
+		int maxNumber = max({ a, b, c });
+		cout << maxNumber * 100 << "\n";
+	}
+}
+
 #include <iostream>
 using namespace std;
 
@@ -358,7 +379,7 @@ int main()
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	
+
 
 	return 0;
 }

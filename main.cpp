@@ -339,6 +339,17 @@ void Q3052()	// 2026/02/18 - 12번째 문제
 	cout << count << "\n";
 }
 
+void Q2525()	// 2026/02/19 - 1번째 문제
+{
+	int A, B, C;
+	cin >> A >> B >> C;
+
+	int M = (B + C) % 60;
+	int H = (A + (B + C) / 60) % 24;
+
+	cout << H << " " << M << "\n";
+}
+
 #include <iostream>
 using namespace std;
 
@@ -347,7 +358,7 @@ int main()
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-
+	
 
 	return 0;
 }

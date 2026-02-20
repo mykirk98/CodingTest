@@ -537,6 +537,21 @@ void Q25304()	// 2026/02/20 - 2번째 문제
 	}
 }
 
+void Q10872()	// 2026/02/20 - 3번째 문제
+{
+	int N;
+	cin >> N;
+
+	unsigned long long result = 1;
+
+	for (int i = 1; i <= N; i++)
+	{
+		result *= i;
+	}
+
+	cout << result << "\n";
+}
+
 #include <iostream>
 
 using namespace std;

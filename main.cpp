@@ -619,6 +619,15 @@ void Q3003()	// 2026/02/20 - 6번째 문제
 	}
 }
 
+
+void Q2558()	// 2026/02/20 - 7번째 문제
+{
+	int A, B;
+	cin >> A >> B;
+
+	cout << A + B << "\n";
+}
+
 #include <iostream>
 using namespace std;
 

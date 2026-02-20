@@ -568,6 +568,40 @@ void Q2292()	// 2026/02/20 - 4번째 문제
 	cout << jump << "\n";
 }
 
+void Q4344()	// 2026/02/20 - 5번째 문제
+{
+	int C;
+	cin >> C;
+
+	for (int i = 0; i < C; i++)
+	{
+		int N;
+		cin >> N;
+
+		int* array = new int[N];
+		double sum = 0, average, cnt = 0;
+
+		for (int j = 0; j < N; j++)
+		{
+			cin >> array[j];
+			sum += array[j];
+		}
+		average = sum / N;
+
+		for (int j = 0; j < N; j++)
+		{
+			if (array[j] > average)
+				cnt++;
+		}
+
+		cout << fixed;	// 고정 소수점 표기법 사용
+		cout.precision(3);	// 소수점 셋째 자리까지 출력하도록 설정
+		cout << (cnt / N) * 100 << "%\n";
+
+		delete[] array;
+	}
+}
+
 #include <iostream>
 using namespace std;
 

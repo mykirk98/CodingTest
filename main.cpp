@@ -471,6 +471,46 @@ void Q1110()	// 2026/02/19 - 7번째 문제
 	cout << cnt << "\n";
 }
 
+//#include <cmath>
+//bool isPrime(int num)
+//{
+//	if (num <= 1)
+//	{
+//		return false;
+//	}
+//	else
+//	{
+//		for (int i = 2; i <= sqrt(num); i++)
+//		{
+//			if (num % i == 0)
+//			{
+//				return false;
+//			}
+//		}
+//		return true;
+//	}
+//}
+
+//void Q1978()	// 2026/02/20 - 1번째 문제
+//{
+//	int N;
+//	cin >> N;
+//
+//	int cnt = 0;
+//	int num;
+//
+//	for (int i = 0; i < N; i++)
+//	{
+//		cin >> num;
+//		if (isPrime(num))
+//		{
+//			cnt++;
+//		}
+//	}
+//
+//	cout << cnt << "\n";
+//}
+
 #include <iostream>
 
 using namespace std;

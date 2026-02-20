@@ -511,6 +511,32 @@ void Q1110()	// 2026/02/19 - 7번째 문제
 //	cout << cnt << "\n";
 //}
 
+void Q25304()	// 2026/02/20 - 2번째 문제
+{
+	int X;
+	cin >> X;
+
+	int N;
+	cin >> N;
+
+	int a, b;
+
+	for (int i = 0; i < N; i++)
+	{
+		cin >> a >> b;
+		X -= a * b;
+	}
+
+	if (X == 0)
+	{
+		cout << "Yes\n";
+	}
+	else
+	{
+		cout << "No\n";
+	}
+}
+
 #include <iostream>
 
 using namespace std;

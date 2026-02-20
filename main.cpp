@@ -602,6 +602,23 @@ void Q4344()	// 2026/02/20 - 5번째 문제
 	}
 }
 
+void Q3003()	// 2026/02/20 - 6번째 문제
+{
+	int answer[] = { 1, 1, 2, 2, 2, 8 };
+
+	int num;
+	for (int i = 0; i < 6; i++)
+	{
+		cin >> num;
+		answer[i] -= num;
+	}
+
+	for (int i = 0; i < 6; i++)
+	{
+		cout << answer[i] << " ";
+	}
+}
+
 #include <iostream>
 using namespace std;
 

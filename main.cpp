@@ -552,8 +552,23 @@ void Q10872()	// 2026/02/20 - 3번째 문제
 	cout << result << "\n";
 }
 
-#include <iostream>
+void Q2292()	// 2026/02/20 - 4번째 문제
+{
+	int N;
+	cin >> N;
+	N--;
+	int jump = 1;
 
+	while (N > 0)
+	{
+		N -= jump * 6;
+		jump++;
+	}
+
+	cout << jump << "\n";
+}
+
+#include <iostream>
 using namespace std;
 
 int main()

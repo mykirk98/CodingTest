@@ -628,7 +628,17 @@ void Q2558()	// 2026/02/20 - 7번째 문제
 	cout << A + B << "\n";
 }
 
+void Q2869()	// 2026/02/20 - 8번째 문제
+{
+	int A, B, V;
+	cin >> A >> B >> V;
+
+	int count = ceil(double(V - A) / (A - B)) + 1;
+	cout << count;
+}
+
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()

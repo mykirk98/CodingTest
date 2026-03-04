@@ -637,16 +637,98 @@ void Q2869()	// 2026/02/20 - 8번째 문제
 	cout << count;
 }
 
+int GLIM1(int n, int k)	// 2026/03/01 - 그림 - 코딩테스트 1
+{
+	int answer = 0;
+
+	answer = n * 12000 + k * 2000 - n / 10 * 2000;
+
+	return answer;
+}
+
+//int GLIM2(vector<vector<int>> board, int k)	// 2026/03/01 - 그림 - 코딩테스트 2
+//{
+//	int answer = 0;
+//
+//	for (int i = 0; i < board.size(); i++)
+//	{
+//		for (int j = 0; j < board[i].size(); j++)
+//		{
+//			if (i + j <= k)
+//			{
+//				answer += board[i][j];
+//			}
+//		}
+//	}
+//	return answer;
+//}
+
+//int GLIM3(vector<vector<int>> dots)		// 2026/03/01 - 그림 - 코딩테스트 3
+//{
+//	int answer = 0;
+//	int minX = 256, maxX = -256, minY = 256, maxY = -256;
+//
+//	for (int i = 0; i < dots.size(); i++)
+//	{
+//		minX = min(minX, dots[i][0]);
+//		maxX = max(maxX, dots[i][0]);
+//		minY = min(minY, dots[i][1]);
+//		maxY = max(maxY, dots[i][1]);
+//	}
+//
+//	int width = maxX - minX, height = maxY - minY;
+//	answer = width * height;
+//
+//	return answer;
+//}
+
 #include <iostream>
 #include <cmath>
+#include <vector>
 using namespace std;
+
+vector<int> GLIM4(vector<int> arr, vector<bool> flag)
+{
+	vector<int> answer;
+
+	for (int i = 0; i < flag.size(); i++)
+	{
+		// flag[i]가 true일 때
+		if (flag[i] == true)
+		{
+			// X에 arr[i]를 arr[i] x 2번 추가
+			for (int j = 0; j < arr[i] * 2; j++)
+			{
+				answer.push_back(arr[i]);
+			}
+		}
+		// flag[i]가 false일 때
+		else
+		{
+			// X에서 마지막 arr[i]개의 원소를 제거
+			for (int j = 0; j < arr[i]; j++)
+			{
+				answer.pop_back();
+			}
+		}
+	}
+
+	return answer;
+}
 
 int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	
+	vector<int> arr = { 3, 2, 4, 1, 3 };
+	vector<bool> flag = { true, false, true, false, false };
+	vector<int> result = GLIM4(arr, flag);
+
+	for (int i = 0; i < result.size(); i++)
+	{
+		cout << result[i] << " ";
+	}
 
 	return 0;
 }

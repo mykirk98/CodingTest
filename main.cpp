@@ -742,17 +742,41 @@ int GLIM1(int n, int k)	// 2026/03/01 - 그림 - 코딩테스트 1
 //	}
 //}
 
+//bool isPrime(int n)
+//{
+//	if (n <= 1)
+//		return false;
+//	for (int i = 2; i <= sqrt(n); i++)
+//	{
+//		if (n % i == 0)
+//			return false;
+//	}
+//	return true;
+//}
+//
+//void Q1929()	// 2026/03/06 - 2번째 문제
+//{
+//	int M, N;
+//	cin >> M >> N;
+//
+//	for (int i = M; i <= N; i++)
+//	{
+//		if (isPrime(i) == true)
+//		{
+//			cout << i << "\n";
+//		}
+//	}
+//}
 
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
-
-	
 
 	return 0;
 }

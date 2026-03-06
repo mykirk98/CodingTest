@@ -768,6 +768,38 @@ int GLIM1(int n, int k)	// 2026/03/01 - 그림 - 코딩테스트 1
 //	}
 //}
 
+void Q1065()
+{
+	int N;
+	cin >> N;
+
+	int count = 0;
+
+	for (int i = 1; i <= N; i++)
+	{
+		if (i < 10)
+		{
+			count++;
+		}
+		else if (i < 100)
+		{
+			count++;
+		}
+		else if (i < 1000)
+		{
+			int a = i / 100;
+			int b = (i % 100) / 10;
+			int c = i % 10;
+			if (a - b == b - c)
+			{
+				count++;
+			}
+		}
+	}
+
+	cout << count << "\n";
+}
+
 
 #include <iostream>
 #include <cmath>
@@ -777,6 +809,8 @@ int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
+
+
 
 	return 0;
 }

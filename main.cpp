@@ -682,53 +682,77 @@ int GLIM1(int n, int k)	// 2026/03/01 - 그림 - 코딩테스트 1
 //	return answer;
 //}
 
+//vector<int> GLIM4(vector<int> arr, vector<bool> flag)
+//{
+//	vector<int> answer;
+//
+//	for (int i = 0; i < flag.size(); i++)
+//	{
+//		// flag[i]가 true일 때
+//		if (flag[i] == true)
+//		{
+//			// X에 arr[i]를 arr[i] x 2번 추가
+//			for (int j = 0; j < arr[i] * 2; j++)
+//			{
+//				answer.push_back(arr[i]);
+//			}
+//		}
+//		// flag[i]가 false일 때
+//		else
+//		{
+//			// X에서 마지막 arr[i]개의 원소를 제거
+//			for (int j = 0; j < arr[i]; j++)
+//			{
+//				answer.pop_back();
+//			}
+//		}
+//	}
+//
+//	return answer;
+//}
+
+//int d(int n)
+//{
+//	int sum = n;
+//	while (n > 0)
+//	{
+//		sum += n % 10;
+//		n /= 10;
+//	}
+//	return sum;
+//}
+//
+//void Q4673()	// 2026/03/06  - 1번째 문제
+//{
+//	bool check[10001] = { false };
+//	for (int i = 1; i <= 10000; i++)
+//	{
+//		int n = d(i);
+//		if (n <= 10000)
+//		{
+//			check[n] = true;
+//		}
+//	}
+//	for (int i = 1; i <= 10000; i++)
+//	{
+//		if (check[i] == false)
+//		{
+//			cout << i << "\n";
+//		}
+//	}
+//}
+
+
+
 #include <iostream>
-#include <cmath>
-#include <vector>
 using namespace std;
-
-vector<int> GLIM4(vector<int> arr, vector<bool> flag)
-{
-	vector<int> answer;
-
-	for (int i = 0; i < flag.size(); i++)
-	{
-		// flag[i]가 true일 때
-		if (flag[i] == true)
-		{
-			// X에 arr[i]를 arr[i] x 2번 추가
-			for (int j = 0; j < arr[i] * 2; j++)
-			{
-				answer.push_back(arr[i]);
-			}
-		}
-		// flag[i]가 false일 때
-		else
-		{
-			// X에서 마지막 arr[i]개의 원소를 제거
-			for (int j = 0; j < arr[i]; j++)
-			{
-				answer.pop_back();
-			}
-		}
-	}
-
-	return answer;
-}
 
 int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	vector<int> arr = { 3, 2, 4, 1, 3 };
-	vector<bool> flag = { true, false, true, false, false };
-	vector<int> result = GLIM4(arr, flag);
-
-	for (int i = 0; i < result.size(); i++)
-	{
-		cout << result[i] << " ";
-	}
+	
 
 	return 0;
 }

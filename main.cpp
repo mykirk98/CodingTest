@@ -809,8 +809,27 @@ void Q1085()	// 2026/03/07 - 1번째 문제
 	cout << minDistance << "\n";
 }
 
+void Q10870()	// 2026/03/07 - 2번째 문제
+{
+	vector<int> fibonacci_arr = { 0, 1 };
+
+	int n;
+	cin >> n;
+	if (n == 0 || n == 1)
+	{
+		cout << fibonacci_arr[n] << "\n";
+		return 0;
+	}
+	for (int i = 2; i <= n; i++)
+	{
+		fibonacci_arr.push_back(fibonacci_arr[i - 1] + fibonacci_arr[i - 2]);
+	}
+	cout << fibonacci_arr[n] << "\n";
+}
+
 #include <iostream>
 #include <cmath>
+#include <vector>
 using namespace std;
 
 int main()

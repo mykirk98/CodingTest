@@ -980,11 +980,31 @@ void Q2738()	// 2026/03/07 - 7번째 문제
 //	}
 //}
 
+void Q11653()	// 2026/03/07 - 9번째 문제
+{
+	int N;
+	cin >> N;
+
+	int z = 2;
+
+	while (N > 1)
+	{
+		if (N % z == 0)
+		{
+			cout << z << "\n";
+			N /= z;
+		}
+		else
+		{
+			z++;
+		}
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
 //using namespace std;
-
 
 int main()
 {

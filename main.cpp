@@ -1,4 +1,7 @@
 #include <iostream>
+#include <vector>
+#include <cmath>
+#include <string>
 using namespace std;
 
 void Q1000()	// 2026/02/16 - 1번째 문제
@@ -431,22 +434,20 @@ void Q2577()	// 2026/02/19 - 5번째 문제
 	}
 }
 
-//#include <string>
-//
-//void Q2908()	// 2026/02/19 - 6번째 문제
-//{
-//
-//	string A, B;
-//	cin >> A >> B;
-//
-//	reverse(A.begin(), A.end());
-//	reverse(B.begin(), B.end());
-//
-//	int numA = stoi(A);
-//	int numB = stoi(B);
-//
-//	cout << max(numA, numB) << "\n";
-//}
+void Q2908()	// 2026/02/19 - 6번째 문제
+{
+
+	string A, B;
+	cin >> A >> B;
+
+	reverse(A.begin(), A.end());
+	reverse(B.begin(), B.end());
+
+	int numA = stoi(A);
+	int numB = stoi(B);
+
+	cout << max(numA, numB) << "\n";
+}
 
 void Q1110()	// 2026/02/19 - 7번째 문제
 {
@@ -471,7 +472,6 @@ void Q1110()	// 2026/02/19 - 7번째 문제
 	cout << cnt << "\n";
 }
 
-//#include <cmath>
 //bool isPrime(int num)
 //{
 //	if (num <= 1)
@@ -646,101 +646,101 @@ int GLIM1(int n, int k)	// 2026/03/01 - 그림 - 코딩테스트 1
 	return answer;
 }
 
-//int GLIM2(vector<vector<int>> board, int k)	// 2026/03/01 - 그림 - 코딩테스트 2
-//{
-//	int answer = 0;
-//
-//	for (int i = 0; i < board.size(); i++)
-//	{
-//		for (int j = 0; j < board[i].size(); j++)
-//		{
-//			if (i + j <= k)
-//			{
-//				answer += board[i][j];
-//			}
-//		}
-//	}
-//	return answer;
-//}
+int GLIM2(vector<vector<int>> board, int k)	// 2026/03/01 - 그림 - 코딩테스트 2
+{
+	int answer = 0;
 
-//int GLIM3(vector<vector<int>> dots)		// 2026/03/01 - 그림 - 코딩테스트 3
-//{
-//	int answer = 0;
-//	int minX = 256, maxX = -256, minY = 256, maxY = -256;
-//
-//	for (int i = 0; i < dots.size(); i++)
-//	{
-//		minX = min(minX, dots[i][0]);
-//		maxX = max(maxX, dots[i][0]);
-//		minY = min(minY, dots[i][1]);
-//		maxY = max(maxY, dots[i][1]);
-//	}
-//
-//	int width = maxX - minX, height = maxY - minY;
-//	answer = width * height;
-//
-//	return answer;
-//}
+	for (int i = 0; i < board.size(); i++)
+	{
+		for (int j = 0; j < board[i].size(); j++)
+		{
+			if (i + j <= k)
+			{
+				answer += board[i][j];
+			}
+		}
+	}
+	return answer;
+}
 
-//vector<int> GLIM4(vector<int> arr, vector<bool> flag)
-//{
-//	vector<int> answer;
-//
-//	for (int i = 0; i < flag.size(); i++)
-//	{
-//		// flag[i]가 true일 때
-//		if (flag[i] == true)
-//		{
-//			// X에 arr[i]를 arr[i] x 2번 추가
-//			for (int j = 0; j < arr[i] * 2; j++)
-//			{
-//				answer.push_back(arr[i]);
-//			}
-//		}
-//		// flag[i]가 false일 때
-//		else
-//		{
-//			// X에서 마지막 arr[i]개의 원소를 제거
-//			for (int j = 0; j < arr[i]; j++)
-//			{
-//				answer.pop_back();
-//			}
-//		}
-//	}
-//
-//	return answer;
-//}
+int GLIM3(vector<vector<int>> dots)		// 2026/03/01 - 그림 - 코딩테스트 3
+{
+	int answer = 0;
+	int minX = 256, maxX = -256, minY = 256, maxY = -256;
 
-//int d(int n)
-//{
-//	int sum = n;
-//	while (n > 0)
-//	{
-//		sum += n % 10;
-//		n /= 10;
-//	}
-//	return sum;
-//}
-//
-//void Q4673()	// 2026/03/06  - 1번째 문제
-//{
-//	bool check[10001] = { false };
-//	for (int i = 1; i <= 10000; i++)
-//	{
-//		int n = d(i);
-//		if (n <= 10000)
-//		{
-//			check[n] = true;
-//		}
-//	}
-//	for (int i = 1; i <= 10000; i++)
-//	{
-//		if (check[i] == false)
-//		{
-//			cout << i << "\n";
-//		}
-//	}
-//}
+	for (int i = 0; i < dots.size(); i++)
+	{
+		minX = min(minX, dots[i][0]);
+		maxX = max(maxX, dots[i][0]);
+		minY = min(minY, dots[i][1]);
+		maxY = max(maxY, dots[i][1]);
+	}
+
+	int width = maxX - minX, height = maxY - minY;
+	answer = width * height;
+
+	return answer;
+}
+
+vector<int> GLIM4(vector<int> arr, vector<bool> flag)
+{
+	vector<int> answer;
+
+	for (int i = 0; i < flag.size(); i++)
+	{
+		// flag[i]가 true일 때
+		if (flag[i] == true)
+		{
+			// X에 arr[i]를 arr[i] x 2번 추가
+			for (int j = 0; j < arr[i] * 2; j++)
+			{
+				answer.push_back(arr[i]);
+			}
+		}
+		// flag[i]가 false일 때
+		else
+		{
+			// X에서 마지막 arr[i]개의 원소를 제거
+			for (int j = 0; j < arr[i]; j++)
+			{
+				answer.pop_back();
+			}
+		}
+	}
+
+	return answer;
+}
+
+int d(int n)
+{
+	int sum = n;
+	while (n > 0)
+	{
+		sum += n % 10;
+		n /= 10;
+	}
+	return sum;
+}
+
+void Q4673()	// 2026/03/06  - 1번째 문제
+{
+	bool check[10001] = { false };
+	for (int i = 1; i <= 10000; i++)
+	{
+		int n = d(i);
+		if (n <= 10000)
+		{
+			check[n] = true;
+		}
+	}
+	for (int i = 1; i <= 10000; i++)
+	{
+		if (check[i] == false)
+		{
+			cout << i << "\n";
+		}
+	}
+}
 
 //bool isPrime(int n)
 //{
@@ -753,7 +753,7 @@ int GLIM1(int n, int k)	// 2026/03/01 - 그림 - 코딩테스트 1
 //	}
 //	return true;
 //}
-//
+
 //void Q1929()	// 2026/03/06 - 2번째 문제
 //{
 //	int M, N;
@@ -818,7 +818,7 @@ void Q10870()	// 2026/03/07 - 2번째 문제
 	if (n == 0 || n == 1)
 	{
 		cout << fibonacci_arr[n] << "\n";
-		return 0;
+		return;
 	}
 	for (int i = 2; i <= n; i++)
 	{
@@ -827,10 +827,31 @@ void Q10870()	// 2026/03/07 - 2번째 문제
 	cout << fibonacci_arr[n] << "\n";
 }
 
-#include <iostream>
-#include <cmath>
-#include <vector>
-using namespace std;
+void Q2609()	// 2026/03/07 - 3번째 문제
+{
+	int A, B;
+	cin >> A >> B;
+
+	int a = A, b = B;
+
+	int remainder = a % b;
+	while (remainder != 0)
+	{
+		a = b;
+		b = remainder;
+		remainder = a % b;
+	}
+	int gcd = b;
+	int lcm = (A * B) / gcd;
+
+	cout << gcd << "\n";
+	cout << lcm << "\n";
+}
+
+//#include <iostream>
+//#include <cmath>
+//#include <vector>
+//using namespace std;
 
 int main()
 {

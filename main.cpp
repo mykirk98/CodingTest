@@ -870,6 +870,29 @@ void Q10250()	// 2026/03/07 - 4번째 문제
 	}
 }
 
+void Q1193()	// 2026/03/07 - 5번째 문제
+{
+	int X;
+	cin >> X;
+
+	int row = 1;
+
+	while (X > row)
+	{
+		X -= row;
+		row++;
+	}
+
+	if (row % 2 == 0)
+	{
+		cout << X << "/" << row - X + 1 << "\n";
+	}
+	else
+	{
+		cout << row - X + 1 << "/" << X << "\n";
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

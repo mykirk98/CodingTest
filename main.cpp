@@ -939,10 +939,52 @@ void Q2738()	// 2026/03/07 - 7번째 문제
 	}
 }
 
+//bool isPrime(int n)	// 2026/03/07 - 8번째 문제
+//{
+//	if (n <= 1)
+//		return false;
+//	for (int i = 2; i <= sqrt(n); i++)
+//	{
+//		if (n % i == 0)
+//			return false;
+//	}
+//	return true;
+//}
+//
+//void Q2581()
+//{
+//	int M, N;
+//	cin >> M >> N;
+//
+//	vector<int> primes;
+//	for (int i = M; i <= N; i++)
+//	{
+//		if (isPrime(i) == true)
+//		{
+//			primes.push_back(i);
+//		}
+//	}
+//	if (primes.empty())
+//	{
+//		cout << -1 << "\n";
+//	}
+//	else
+//	{
+//		int sum = 0;
+//		for (int i = 0; i < primes.size(); i++)
+//		{
+//			sum += primes[i];
+//		}
+//		cout << sum << "\n";
+//		cout << primes[0] << "\n";
+//	}
+//}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
 //using namespace std;
+
 
 int main()
 {

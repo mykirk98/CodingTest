@@ -893,6 +893,18 @@ void Q1193()	// 2026/03/07 - 5번째 문제
 	}
 }
 
+void Q2475()	// 2026/03/07 - 6번째 문제
+{
+	int sum = 0;
+	for (int i = 0; i < 5; i++)
+	{
+		int num;
+		cin >> num;
+		sum += num * num;
+	}
+	cout << sum % 10 << "\n";
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

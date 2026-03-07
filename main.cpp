@@ -905,6 +905,40 @@ void Q2475()	// 2026/03/07 - 6번째 문제
 	cout << sum % 10 << "\n";
 }
 
+void Q2738()	// 2026/03/07 - 7번째 문제
+{
+	int N, M;
+	cin >> N >> M;
+
+	vector<vector<int>> matrixA = vector<vector<int>>(N, vector<int>(M));
+	vector<vector<int>> matrixB = vector<vector<int>>(N, vector<int>(M));
+
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < M; j++)
+		{
+			cin >> matrixA[i][j];
+		}
+	}
+
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < M; j++)
+		{
+			cin >> matrixB[i][j];
+		}
+	}
+
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < M; j++)
+		{
+			cout << matrixA[i][j] + matrixB[i][j] << " ";
+		}
+		cout << "\n";
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

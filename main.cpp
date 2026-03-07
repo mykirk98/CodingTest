@@ -848,6 +848,28 @@ void Q2609()	// 2026/03/07 - 3번째 문제
 	cout << lcm << "\n";
 }
 
+void Q10250()	// 2026/03/07 - 4번째 문제
+{
+	int T;
+	cin >> T;
+	int H, W, N;
+	for (int i = 0; i < T; i++)
+	{
+		cin >> H >> W >> N;
+
+		int floor = N % H;
+		int roomNumber = (N / H) + 1;
+
+		if (floor == 0)
+		{
+			floor = H;
+			roomNumber--;
+		}
+
+		cout << floor * 100 + roomNumber << "\n";
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

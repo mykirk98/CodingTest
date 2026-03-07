@@ -1001,6 +1001,34 @@ void Q11653()	// 2026/03/07 - 9번째 문제
 	}
 }
 
+void Q2775()	// 2026/03/07 - 10번째 문제
+{
+	int T;
+	cin >> T;
+
+	for (int t = 0; t < T; t++)
+	{
+		int k, n;
+		cin >> k >> n;
+
+		vector<int> zeroFloor;
+		zeroFloor.push_back(0);
+		for (int i = 1; i <= n; i++)
+		{
+			zeroFloor.push_back(i);
+		}
+
+		for (int i = 0; i < k; i++)
+		{
+			for (int j = 2; j <= n; j++)
+			{
+				zeroFloor[j] += zeroFloor[j - 1];
+			}
+		}
+		cout << zeroFloor[n] << "\n";
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

@@ -800,6 +800,14 @@ void Q1065()
 	cout << count << "\n";
 }
 
+void Q1085()	// 2026/03/07 - 1번째 문제
+{
+	int x, y, w, h;
+	cin >> x >> y >> w >> h;
+
+	int minDistance = min({ x - 0, y - 0,w - x, h - y });
+	cout << minDistance << "\n";
+}
 
 #include <iostream>
 #include <cmath>

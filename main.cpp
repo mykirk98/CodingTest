@@ -1223,11 +1223,37 @@ void Q10039()	// 2026/03/09 - 8번째 문제
 	cout << sum / 5 << "\n";
 }
 
+//int GCD(int a, int b)
+//{
+//	while (b != 0)
+//	{
+//		int temp = b;
+//		b = a % b;
+//		a = temp;
+//	}
+//	return a;
+//}
+//
+//void Q1934()	// 2026/03/09 - 9번째 문제
+//{
+//	int T;
+//	cin >> T;
+//
+//	while (T--)
+//	{
+//		int A, B;
+//		cin >> A >> B;
+//
+//		cout << A * B / GCD(A, B) << "\n";
+//	}
+//}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
 //#include <string>
 //using namespace std;
+
 
 
 int main() {

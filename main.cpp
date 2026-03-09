@@ -1113,9 +1113,59 @@ void Q1010()	// 2026/03/09 - 4번째 문제
 	}
 }
 
+void Q1541()	// 2026/03/09 - 5번째 문제
+{
+	string input;
+	cin >> input;
+
+	vector<int> nums;
+	vector<char> ops;
+
+	string tmp = "";
+	for (char c : input)
+	{
+		if (c == '+' || c == '-')
+		{
+			nums.push_back(stoi(tmp));
+			ops.push_back(c);
+			tmp = "";
+		}
+		else
+		{
+			tmp += c;
+		}
+	}
+	nums.push_back(stoi(tmp));
+
+	long long result = nums[0];
+	bool minusStarted = false;
+
+	for (int i = 0; i < ops.size(); i++)
+	{
+		if (ops[i] == '+')
+		{
+			if (minusStarted)
+			{
+				result -= nums[i + 1];
+			}
+			else
+			{
+				result += nums[i + 1];
+			}
+		}
+		else
+		{
+			minusStarted = true;
+			result -= nums[i + 1];
+		}
+	}
+	cout << result << "\n";
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
+//#include <string>
 //using namespace std;
 
 

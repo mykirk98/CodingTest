@@ -1029,6 +1029,29 @@ void Q2775()	// 2026/03/07 - 10번째 문제
 	}
 }
 
+void Q4153()	// 2026/03/09 - 1번째 문제
+{
+	int a, b, c;
+
+	while (true)
+	{
+		cin >> a >> b >> c;
+		if (a == 0 && b == 0 && c == 0)
+		{
+			break;
+		}
+
+		if (a * a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a)
+		{
+			cout << "right\n";
+		}
+		else
+		{
+			cout << "wrong\n";
+		}
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

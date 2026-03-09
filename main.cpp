@@ -1181,6 +1181,33 @@ void Q9461()	// 2026/03/09 - 6번째 문제
 	}
 }
 
+void Q5086()	// 2026/03/09 - 7번째 문제
+{
+	while (true)
+	{
+		int a, b;
+		cin >> a >> b;
+
+		if (a == 0 && b == 0)
+		{
+			break;
+		}
+
+		if (a % b == 0)
+		{
+			cout << "multiple" << "\n";
+		}
+		else if (b % a == 0)
+		{
+			cout << "factor" << "\n";
+		}
+		else
+		{
+			cout << "neither" << "\n";
+		}
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
@@ -1192,7 +1219,7 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	
+
 
 	return 0;
 }

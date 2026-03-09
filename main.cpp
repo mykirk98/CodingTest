@@ -1089,14 +1089,37 @@ void Q1712()	// 2026/03/09 - 2번째 문제
 //	cout << result << "\n";
 //}
 
+void Q1010()	// 2026/03/09 - 4번째 문제
+{
+	long long combination[30][30] = {};
+	// 파스칼의 삼각형 미리 계산
+	for (int i = 0; i <= 29; i++)
+	{
+		combination[i][0] = 1;
+		for (int j = 1; j <= i; j++)
+		{
+			combination[i][j] = combination[i - 1][j - 1] + combination[i - 1][j];
+		}
+	}
+
+	int T;
+	cin >> T;
+
+	for (int i = 0; i < T; i++)
+	{
+		int N, M;
+		cin >> N >> M;
+		cout << combination[M][N] << "\n";
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
 //using namespace std;
 
 
-int main()
-{
+int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 

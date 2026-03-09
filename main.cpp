@@ -1052,6 +1052,21 @@ void Q4153()	// 2026/03/09 - 1번째 문제
 	}
 }
 
+void Q1712()	// 2026/03/09 - 2번째 문제
+{
+	int A, B, C;
+	cin >> A >> B >> C;
+
+	if (B >= C)
+	{
+		cout << -1 << "\n";
+	}
+	else
+	{
+		cout << A / (C - B) + 1 << "\n";
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

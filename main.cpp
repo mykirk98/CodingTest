@@ -1162,6 +1162,25 @@ void Q1541()	// 2026/03/09 - 5번째 문제
 	cout << result << "\n";
 }
 
+void Q9461()	// 2026/03/09 - 6번째 문제
+{
+	vector<long long> arr = { 1, 1, 1, 2, 2 };
+	while (arr.size() < 100)
+	{
+		arr.push_back(arr[arr.size() - 1] + arr[arr.size() - 5]);
+	}
+
+	int T;
+	cin >> T;
+	for (int t = 0; t < T; t++)
+	{
+		int N;
+		cin >> N;
+
+		cout << arr[N - 1] << "\n";
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
@@ -1173,7 +1192,7 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
-
+	
 
 	return 0;
 }

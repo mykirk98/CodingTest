@@ -1248,13 +1248,43 @@ void Q10039()	// 2026/03/09 - 8번째 문제
 //	}
 //}
 
+void Q10757()	// 2026/03/09 - 10번째 문제
+{
+	string A, B;
+	cin >> A >> B;
+	int carry = 0;
+
+	while (A.size() < B.size())
+	{
+		A = "0" + A;
+	}
+	while (B.size() < A.size())
+	{
+		B = "0" + B;
+	}
+
+	string result = A;
+
+	for (int i = A.size() - 1; i >= 0; i--)
+	{
+		int sum = (A[i] - '0') + (B[i] - '0') + carry;
+		result[i] = (sum % 10) + '0';
+		carry = sum / 10;
+	}
+
+	if (carry > 0)
+	{
+		result = "1" + result;
+	}
+
+	cout << result << "\n";
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
 //#include <string>
 //using namespace std;
-
-
 
 int main() {
 	ios::sync_with_stdio(false);

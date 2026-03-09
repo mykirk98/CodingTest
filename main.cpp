@@ -1067,10 +1067,33 @@ void Q1712()	// 2026/03/09 - 2번째 문제
 	}
 }
 
+//int factorial(int n)
+//{
+//	if (n == 0 || n == 1)
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return n * factorial(n - 1);
+//	}
+//}
+//
+//void Q11050()	// 2026/03/09 - 3번째 문제
+//{
+//	int N, K;
+//	cin >> N >> K;
+//
+//	int result = factorial(N) / (factorial(K) * factorial(N - K));
+//
+//	cout << result << "\n";
+//}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
 //using namespace std;
+
 
 int main()
 {

@@ -1208,6 +1208,21 @@ void Q5086()	// 2026/03/09 - 7번째 문제
 	}
 }
 
+void Q10039()	// 2026/03/09 - 8번째 문제
+{
+	int sum = 0, score;
+	for (int i = 0; i < 5; i++)
+	{
+		cin >> score;
+		if (score < 40)
+		{
+			score = 40;
+		}
+		sum += score;
+	}
+	cout << sum / 5 << "\n";
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

@@ -2,6 +2,7 @@
 #include <vector>
 #include <cmath>
 #include <string>
+#include <algorithm>
 using namespace std;
 
 void Q1000()	// 2026/02/16 - 1번째 문제
@@ -1280,16 +1281,49 @@ void Q10757()	// 2026/03/09 - 10번째 문제
 	cout << result << "\n";
 }
 
+void Q1026()	// 2026/03/10 - 1번째 문제
+{
+	int N;
+	cin >> N;
+
+	int* A = new int[N];
+	int* B = new int[N];
+
+	for (int i = 0; i < N; i++)
+	{
+		cin >> A[i];
+	}
+	for (int i = 0; i < N; i++)
+	{
+		cin >> B[i];
+	}
+
+	sort(A, A + N);
+	sort(B, B + N);
+
+	int sum = 0;
+	for (int i = 0; i < N; i++)
+	{
+		sum += A[i] * B[N - i - 1];
+	}
+
+	cout << sum << "\n";
+
+	delete[] A;
+	delete[] B;
+
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
 //#include <string>
+// #include <algorithm>
 //using namespace std;
 
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
-
 
 
 	return 0;

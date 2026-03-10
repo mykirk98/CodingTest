@@ -1343,6 +1343,46 @@ void Q2501()	// 2026/03/10 - 2번째 문제
 	}
 }
 
+void Q1002()
+{
+	int T;
+	cin >> T;
+
+	while (T--)
+	{
+		int x1, y1, r1, x2, y2, r2;
+		cin >> x1 >> y1 >> r1 >> x2 >> y2 >> r2;
+
+		if (x1 == x2 && y1 == y2)
+		{
+			if (r1 == r2)
+			{
+				cout << -1 << "\n";
+			}
+			else
+			{
+				cout << 0 << "\n";
+			}
+		}
+		else
+		{
+			double  distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+			if (distance == r1 + r2 || distance == abs(r1 - r2))
+			{
+				cout << 1 << "\n";
+			}
+			else if (r1 + r2 > distance && abs(r1 - r2) < distance)
+			{
+				cout << 2 << "\n";
+			}
+			else
+			{
+				cout << 0 << "\n";
+			}
+		}
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

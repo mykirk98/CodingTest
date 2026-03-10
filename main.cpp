@@ -1311,19 +1311,49 @@ void Q1026()	// 2026/03/10 - 1번째 문제
 
 	delete[] A;
 	delete[] B;
+}
 
+void Q2501()	// 2026/03/10 - 2번째 문제
+{
+	int N, K;
+	cin >> N >> K;
+
+	vector<int> factors;
+
+	for (int i = 1; i <= sqrt(N); i++)
+	{
+		if (N % i == 0)
+		{
+			factors.push_back(i);
+			if (i != N / i)
+			{
+				factors.push_back(N / i);
+			}
+		}
+	}
+	sort(factors.begin(), factors.end());
+
+	if (K > factors.size())
+	{
+		cout << 0 << "\n";
+	}
+	else
+	{
+		cout << factors[K - 1] << "\n";
+	}
 }
 
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
 //#include <string>
-// #include <algorithm>
+//#include <algorithm>
 //using namespace std;
 
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
+
 
 
 	return 0;

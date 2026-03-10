@@ -2,6 +2,7 @@
 #include <vector>
 #include <cmath>
 #include <string>
+#include <set>
 #include <algorithm>
 using namespace std;
 
@@ -634,8 +635,8 @@ void Q2869()	// 2026/02/20 - 8번째 문제
 	int A, B, V;
 	cin >> A >> B >> V;
 
-	int count = ceil(double(V - A) / (A - B)) + 1;
-	cout << count;
+	double count = ceil(double(V - A) / (A - B)) + 1;
+	cout << int(count);
 }
 
 int GLIM1(int n, int k)	// 2026/03/01 - 그림 - 코딩테스트 1
@@ -1266,7 +1267,7 @@ void Q10757()	// 2026/03/09 - 10번째 문제
 
 	string result = A;
 
-	for (int i = A.size() - 1; i >= 0; i--)
+	for (int i = int(A.size()) - 1; i >= 0; i--)
 	{
 		int sum = (A[i] - '0') + (B[i] - '0') + carry;
 		result[i] = (sum % 10) + '0';
@@ -1343,7 +1344,7 @@ void Q2501()	// 2026/03/10 - 2번째 문제
 	}
 }
 
-void Q1002()
+void Q1002()	// 2026/03/10 - 3번째 문제
 {
 	int T;
 	cin >> T;
@@ -1383,11 +1384,28 @@ void Q1002()
 	}
 }
 
+void Q1037()	// 2026/03/10 - 4번째 문제
+{
+	int N;
+	cin >> N;
+
+	set<int> factors;
+	for (int i = 0; i < N; i++)
+	{
+		int num;
+		cin >> num;
+		factors.insert(num);
+	}
+
+	cout << *factors.begin() * *factors.rbegin() << "\n";
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
 //#include <string>
 //#include <algorithm>
+#include <set>
 //using namespace std;
 
 int main() {

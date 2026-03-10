@@ -1415,6 +1415,24 @@ void Q1676()	// 2026/03/10 - 5번째 문제
 	cout << zeros << "\n";
 }
 
+void Q2748()	// 2026/03/10 - 6번째 문제
+{
+	vector<long long> fibonacci = { 0, 1 };
+
+	int n;
+	cin >> n;
+
+	if (n >= 2)
+	{
+		for (int i = 2; i <= n; i++)
+		{
+			fibonacci.push_back(fibonacci[i - 1] + fibonacci[i - 2]);
+		}
+	}
+
+	cout << fibonacci[n] << "\n";
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
@@ -1427,7 +1445,6 @@ int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
-
 
 
 	return 0;

@@ -1400,15 +1400,31 @@ void Q1037()	// 2026/03/10 - 4번째 문제
 	cout << *factors.begin() * *factors.rbegin() << "\n";
 }
 
+void Q1676()	// 2026/03/10 - 5번째 문제
+{
+	int N;
+	cin >> N;
+
+	int zeros = 0;
+	while (N >= 5)
+	{
+		N /= 5;
+		zeros += N;
+	}
+
+	cout << zeros << "\n";
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
 //#include <string>
 //#include <algorithm>
-#include <set>
+//#include <set>
 //using namespace std;
 
-int main() {
+int main()
+{
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 

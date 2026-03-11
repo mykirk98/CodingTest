@@ -1433,6 +1433,23 @@ void Q2748()	// 2026/03/10 - 6번째 문제
 	cout << fibonacci[n] << "\n";
 }
 
+void Q1924()	// 2026/03/11 - 1번째 문제
+{
+	int month[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+	string dayOfWeek[7] = { "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" };
+
+	int x, y;
+	cin >> x >> y;
+
+	int totalDays = 0;
+	for (int i = 0; i < x - 1; i++)
+	{
+		totalDays += month[i];
+	}
+	totalDays += y;
+	cout << dayOfWeek[totalDays % 7] << "\n";
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
@@ -1445,6 +1462,7 @@ int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
+
 
 
 	return 0;

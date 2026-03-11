@@ -1475,6 +1475,22 @@ void Q25206()	// 2026/03/11 - 2번째 문제
 
 }
 
+void Q2587()	// 2026/03/11 - 3번째 문제
+{
+	int* arr = new int[5];
+	int sum = 0;
+	for (int i = 0; i < 5; i++)
+	{
+		cin >> arr[i];	// 100보다 작은 10의 배수만 입력받음
+		sum += arr[i];
+	}
+
+	sort(arr, arr + 5);
+
+	cout << sum / 5 << "\n";	// 평균 출력
+	cout << arr[2] << "\n";	// 중앙값 출력
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

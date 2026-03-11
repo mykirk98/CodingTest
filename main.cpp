@@ -1491,6 +1491,14 @@ void Q2587()	// 2026/03/11 - 3번째 문제
 	cout << arr[2] << "\n";	// 중앙값 출력
 }
 
+void Q3046()	// 2026/03/11 - 4번째 문제
+{
+	int R1, S;
+	cin >> R1 >> S;
+
+	cout << 2 * S - R1 << "\n";
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

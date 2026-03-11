@@ -4,6 +4,7 @@
 #include <string>
 #include <set>
 #include <algorithm>
+#include <unordered_map>
 using namespace std;
 
 void Q1000()	// 2026/02/16 - 1번째 문제
@@ -1450,12 +1451,37 @@ void Q1924()	// 2026/03/11 - 1번째 문제
 	cout << dayOfWeek[totalDays % 7] << "\n";
 }
 
+void Q25206()	// 2026/03/11 - 2번째 문제
+{
+	unordered_map<string, double> gradeMap = { {"A+", 4.5},{"A0", 4.0},{"B+", 3.5},{"B0", 3.0},{"C+", 2.5},{"C0", 2.0},{"D+", 1.5},{"D0", 1.0},{"F", 0.0} };
+	double totalScore = 0.0, totalCredits = 0.0;
+
+	for (int i = 0; i < 20; i++)
+	{
+		string courseName, grade;
+		double credit;
+		cin >> courseName >> credit >> grade;
+
+		if (grade != "P")
+		{
+			totalCredits += credit;
+			totalScore += gradeMap[grade] * credit;
+		}
+	}
+
+	cout << fixed;	// 고정 소수점 표기법 사용
+	cout.precision(6);	// 소수점 여섯 자리까지 출력하도록 설정
+	cout << totalScore / totalCredits << "\n";
+
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
 //#include <string>
 //#include <algorithm>
 //#include <set>
+//#include <unordered_map>
 //using namespace std;
 
 int main()

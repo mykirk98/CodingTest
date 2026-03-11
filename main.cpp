@@ -1499,6 +1499,41 @@ void Q3046()	// 2026/03/11 - 4번째 문제
 	cout << 2 * S - R1 << "\n";
 }
 
+bool isPrime(int num)
+{
+	if (num <= 1)
+		return false;
+	else
+	{
+		for (int i = 2; i <= sqrt(num); i++)
+		{
+			if (num % i == 0)
+				return false;
+		}
+		return true;
+	}
+}
+
+void Q4948()	// 2026/03/11 - 5번째 문제
+{
+	int n;
+
+	while (cin >> n && n != 0)
+	{
+		int count = 0;
+
+		for (int i = n + 1; i <= 2 * n; i++)
+		{
+			if (isPrime(i))
+			{
+				count++;
+			}
+		}
+
+		cout << count << "\n";
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

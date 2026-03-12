@@ -1612,6 +1612,28 @@ void Q2747()	// 2026/03/12 - 4번째 문제
 	cout << fibonacci[n] << "\n";
 }
 
+//long long power(long long a, long long b, long long c)
+//{
+//	if (b == 0)
+//		return 1;
+//
+//	long long half = power(a, b / 2, c);
+//	long long result = (half * half) % c;
+//
+//	if (b % 2 == 1)
+//		result = (result * a) % c;
+//
+//	return result;
+//}
+//
+//void Q1629()	// 2026/03/12 - 5번째 문제
+//{
+//	int A, B, C;
+//	cin >> A >> B >> C;
+//
+//	cout << power(A, B, C) << "\n";
+//}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

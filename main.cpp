@@ -1593,7 +1593,23 @@ void Q2420()	// 2026/03/12 - 3번째 문제
 		swap(M, N);
 
 	cout << N - M << "\n";
+}
 
+void Q2747()	// 2026/03/12 - 4번째 문제
+{
+	vector<unsigned long long> fibonacci = { 0, 1 };
+
+	int n;
+	cin >> n;	// n <= 45
+
+	if (n >= 2)
+	{
+		for (int i = 2; i <= n; i++)
+		{
+			fibonacci.push_back(fibonacci[i - 2] + fibonacci[i - 1]);
+		}
+	}
+	cout << fibonacci[n] << "\n";
 }
 
 //#include <iostream>

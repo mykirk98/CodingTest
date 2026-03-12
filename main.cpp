@@ -1534,6 +1534,32 @@ void Q4948()	// 2026/03/11 - 5번째 문제
 	}
 }
 
+void Q2720()	// 2026/03/12 - 1번째 문제
+{
+	int quarter, dime, nickel, penny;
+	int T;
+	cin >> T;
+
+	while (T--)
+	{
+		int C;
+		cin >> C;
+
+		quarter = C / 25;
+		C %= 25;
+
+		dime = C / 10;
+		C %= 10;
+
+		nickel = C / 5;
+		C %= 5;
+
+		penny = C;
+
+		cout << quarter << " " << dime << " " << nickel << " " << penny << "\n";
+	}
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

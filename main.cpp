@@ -1560,6 +1560,30 @@ void Q2720()	// 2026/03/12 - 1번째 문제
 	}
 }
 
+void Q2745()
+{
+	int B;
+	string N;
+	cin >> N >> B;
+
+	long long decimalValue = 0;
+	int power = 0;
+
+	for (int i = N.size() - 1; i >= 0; i--)
+	{
+		int digitValue;
+		if (N[i] >= 'A')
+			digitValue = N[i] - 'A' + 10;
+		else
+			digitValue = N[i] - '0';
+
+		decimalValue += static_cast<long long>(digitValue * pow(B, power));
+		power++;
+	}
+
+	cout << decimalValue << "\n";
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

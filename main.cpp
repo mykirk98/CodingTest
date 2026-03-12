@@ -1560,7 +1560,7 @@ void Q2720()	// 2026/03/12 - 1번째 문제
 	}
 }
 
-void Q2745()
+void Q2745()	// 2026/03/12 - 2번째 문제
 {
 	int B;
 	string N;
@@ -1582,6 +1582,18 @@ void Q2745()
 	}
 
 	cout << decimalValue << "\n";
+}
+
+void Q2420()	// 2026/03/12 - 3번째 문제
+{
+	long long N, M;
+	cin >> N >> M;
+
+	if (M > N)
+		swap(M, N);
+
+	cout << N - M << "\n";
+
 }
 
 //#include <iostream>

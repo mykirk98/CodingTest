@@ -1735,7 +1735,6 @@ void Q1251()	// 2026/03/25 - 2번째 문제
 			reverse(part2.begin(), part2.end());
 			reverse(part3.begin(), part3.end());
 
-
 			string result = part1 + part2 + part3;
 			// 결과가 현재까지의 답보다 사전적으로 더 작은 경우 업데이트
 			if (answer.empty() || result < answer)
@@ -1746,6 +1745,22 @@ void Q1251()	// 2026/03/25 - 2번째 문제
 	}
 
 	cout << answer << "\n";
+}
+
+void Q1312()	// 2026/03/25 - 3번째 문제
+{
+	int A, B, N;
+	cin >> A >> B >> N;
+
+	int remainder = A % B;
+
+	for (int i = 0; i < N; i++)
+	{
+		remainder *= 10;
+		if (i == N - 1)
+			cout << remainder / B << "\n";
+		remainder %= B;
+	}
 }
 
 //#include <iostream>

@@ -1712,6 +1712,42 @@ void Q2747()	// 2026/03/12 - 4번째 문제
 //	}
 //}
 
+void Q1251()	// 2026/03/25 - 2번째 문제
+{
+	string word;
+	cin >> word;
+
+	int N = word.size();
+
+	string answer = "";
+
+	for (int i = 1; i <= N - 2; i++)
+	{
+		for (int j = i + 1; j <= N - 1; j++)
+		{
+			// 세 부분으로 나누기
+			string part1 = word.substr(0, i);
+			string part2 = word.substr(i, j - i);
+			string part3 = word.substr(j);
+
+			// 각 부분 뒤집기
+			reverse(part1.begin(), part1.end());
+			reverse(part2.begin(), part2.end());
+			reverse(part3.begin(), part3.end());
+
+
+			string result = part1 + part2 + part3;
+			// 결과가 현재까지의 답보다 사전적으로 더 작은 경우 업데이트
+			if (answer.empty() || result < answer)
+			{
+				answer = result;
+			}
+		}
+	}
+
+	cout << answer << "\n";
+}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
@@ -1720,8 +1756,6 @@ void Q2747()	// 2026/03/12 - 4번째 문제
 //#include <set>
 //#include <unordered_map>
 //using namespace std;
-
-
 
 int main()
 {

@@ -1634,6 +1634,84 @@ void Q2747()	// 2026/03/12 - 4번째 문제
 //	cout << power(A, B, C) << "\n";
 //}
 
+//bool compare(const string& a, const string& b)
+//{
+//	if (a.size() != b.size())
+//	{
+//		return a.size() < b.size();
+//	}
+//	return a < b;
+//}
+//
+//void merge(vector<string>& arr, int left, int mid, int right)
+//{
+//	vector<string> temp;
+//
+//	int i = left, j = mid + 1;
+//
+//	while (i <= mid && j <= right)
+//	{
+//		// i번째 문자열과 j번째 문자열을 비교하여 더 작은 것을 temp에 추가
+//		if (compare(arr[i], arr[j]))
+//			temp.push_back(arr[i++]);
+//		else
+//			temp.push_back(arr[j++]);
+//	}
+//
+//	// i가 mid까지 남아있다면 temp에 추가
+//	while (i <= mid)
+//	{
+//		temp.push_back(arr[i++]);
+//	}
+//	// j가 right까지 남아있다면 temp에 추가
+//	while (j <= right)
+//	{
+//		temp.push_back(arr[j++]);
+//	}
+//
+//	// temp에 정렬된 문자열들을 arr의 해당 위치에 복사
+//	for (int k = left; k <= right; k++)
+//	{
+//		arr[k] = temp[k - left];
+//	}
+//}
+//
+//void mergeSort(vector<string>& words, int left, int right)
+//{
+//	if (left >= right)
+//		return;
+//
+//	int mid = (left + right) / 2;
+//
+//	mergeSort(words, left, mid);
+//	mergeSort(words, mid + 1, right);
+//
+//	merge(words, left, mid, right);
+//}
+//
+//void Q1181()	// 2026/03/25 - 1번째 문제
+//{
+//	set<string> words = {};
+//	int N;
+//	cin >> N;
+//
+//	while (N--)
+//	{
+//		string word;
+//		cin >> word;
+//
+//		words.insert(word);	// 자동 중복 제거
+//	}
+//
+//	vector<string> sortedWords(words.begin(), words.end());
+//	mergeSort(sortedWords, 0, sortedWords.size() - 1);
+//
+//	for (const string& word : sortedWords)
+//	{
+//		cout << word << "\n";
+//	}
+//}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
@@ -1642,6 +1720,8 @@ void Q2747()	// 2026/03/12 - 4번째 문제
 //#include <set>
 //#include <unordered_map>
 //using namespace std;
+
+
 
 int main()
 {

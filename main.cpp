@@ -1763,6 +1763,74 @@ void Q1312()	// 2026/03/25 - 3번째 문제
 	}
 }
 
+//bool isLeapYear(int year)
+//{
+//	if ((year % 4 == 0 && year % 100 != 0) || (year % 400) == 0)
+//		return true;
+//	else
+//		return false;
+//}
+//
+//int DaysInYear(int year)
+//{
+//	if (isLeapYear(year))
+//	{
+//		return 366;
+//	}
+//	else
+//	{
+//		return 365;
+//	}
+//}
+//
+//int DaysInMonth(int year, int month)
+//{
+//	int days[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+//	if (month == 2 && isLeapYear(year))
+//	{
+//		return 29;
+//	}
+//	return days[month];
+//}
+//
+//long long totalDays(int year, int month, int day)
+//{
+//	long long total = 0;
+//
+//	// 1년부터 (year - 1)년까지의 총 일수 계산
+//	for (int i = 1; i < year; i++)
+//	{
+//		total += isLeapYear(i) ? 366 : 365;
+//	}
+//
+//	// 해당 년도의 1월부터 (month - 1)월까지의 총 일수 계산
+//	for (int i = 1; i < month; i++)
+//	{
+//		total += DaysInMonth(year, i);
+//	}
+//
+//	total += day;
+//
+//	return total;
+//}
+//
+//void Q1308()	// 2026/03/25 - 4번째 문제
+//{
+//	int y1, m1, d1, y2, m2, d2;
+//	cin >> y1 >> m1 >> d1;
+//	cin >> y2 >> m2 >> d2;
+//
+//	// 천년 이상 체크
+//	if (y2 > y1 + 1000 || (y2 == y1 + 1000 && (m2 > m1 || (m2 == m1 && d2 >= d1))))
+//	{
+//		cout << "gg\n";
+//		return 0;
+//	}
+//
+//	long long diff = totalDays(y2, m2, d2) - totalDays(y1, m1, d1);
+//	cout << "D-" << diff << "\n";
+//}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>

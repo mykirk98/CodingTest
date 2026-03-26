@@ -1831,6 +1831,50 @@ void Q1312()	// 2026/03/25 - 3번째 문제
 //	cout << "D-" << diff << "\n";
 //}
 
+//bool isLeapYear(int year)
+//{
+//	if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+//		return true;
+//	else
+//		return false;
+//}
+//
+//void Q1340()	// 2026/03/26 - 1번째 문제
+//{
+//	unordered_map<string, int> monthMap = { {"January", 0}, {"February", 1}, {"March", 2}, {"April", 3}, {"May", 4}, {"June", 5}, {"July", 6}, {"August", 7}, {"September", 8}, {"October", 9}, {"November", 10}, {"December", 11} };
+//	int days[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+//	string month;
+//	int year, day, hour, minute;
+//	char colon, comma;
+//	long long totalMinutes = 0;
+//
+//	cin >> month >> day >> comma >> year >> hour >> colon >> minute;
+//
+//	if (isLeapYear(year))
+//	{
+//		days[1] = 29;
+//	}
+//
+//	for (int i = 0; i < monthMap[month]; i++)
+//	{
+//		totalMinutes += days[i];
+//	}
+//
+//	totalMinutes += day - 1;
+//	totalMinutes *= 24;
+//	totalMinutes += hour;
+//	totalMinutes *= 60;
+//	totalMinutes += minute;
+//
+//	long long minutesInYear = (isLeapYear(year) ? 366 : 365) * 24 * 60;
+//
+//	double percentage = (static_cast<double>(totalMinutes) / minutesInYear) * 100;
+//
+//	cout << fixed;
+//	cout.precision(9);
+//	cout << percentage << "\n";
+//}
+
 //#include <iostream>
 //#include <cmath>
 //#include <vector>
